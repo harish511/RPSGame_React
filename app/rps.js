@@ -35,13 +35,11 @@ function PlayUseCase(p1, p2, ui,repo) {
         return p1==p2;
     }
 
-
 }
 
 module.exports = {
     play,
     Play
-
 }
 
 
