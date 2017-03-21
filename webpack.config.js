@@ -19,10 +19,10 @@ module.exports = {
     historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
-      poll: 1000,
+      poll: 1000
     }
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   module: {
     loaders: [
      {
@@ -40,13 +40,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
-    new webpack.SourceMapDevToolPlugin({
-   filename: '[file].map',
-   exclude: ['vendors.js'],
-   columns: false, // no columns in SourceMaps
-   module: true // use SourceMaps from loaders 
-})
+    new ExtractTextPlugin("styles.css")
     // new webpack.optimize.UglifyJsPlugin(),
     // new webpack.optimize.DedupePlugin(),
     // new webpack.optimize.OccurenceOrderPlugin()
