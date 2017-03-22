@@ -31,10 +31,10 @@ module.exports = {
         exclude: [node_modules_dir],
         query: {
           cacheDirectory: true,
-          presets: ['react', 'es2015']
+          presets: ["es2015", "stage-0", "react"],
         }
       },
-      {test: /\.js$/, exclude: [node_modules_dir], loader: "babel", query: {presets:['react', 'es2015']}},
+      {test: /\.js$/, exclude: [node_modules_dir], loader: "babel", query: {presets: ["es2015", "stage-0", "react"]}},
       { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: "url-loader?limit=1024&name=fonts/[name].[ext]" }
     ]

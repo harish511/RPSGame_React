@@ -14,21 +14,21 @@ describe("history",function () {
     })
 
     it("given players has played before", function () {
-        play("rock","paper",ui, repo)
+        play("Rock","Paper",ui, repo)
         history(ui, repo)
-        expect(ui.plays).toHaveBeenCalledWith([new Play("rock","paper","p2")])
+        expect(ui.plays).toHaveBeenCalledWith([new Play("Rock","Paper","lost")])
     });
 
     it("given players has played before p1 wins", function () {
-        play("rock","scissors",ui, repo)
+        play("Rock","Scissors",ui, repo)
         history(ui, repo)
-        expect(ui.plays).toHaveBeenCalledWith([new Play("rock","scissors","p1")])
+        expect(ui.plays).toHaveBeenCalledWith([new Play("Rock","Scissors","won")])
     });
 
     it("given players has played before and match is tie", function () {
-        play("rock","rock",ui, repo)
+        play("Rock","Rock",ui, repo)
         history(ui, repo)
-        expect(ui.plays).toHaveBeenCalledWith([new Play("rock","rock","tie")])
+        expect(ui.plays).toHaveBeenCalledWith([new Play("Rock","Rock","tie")])
     });
 
 

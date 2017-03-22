@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/harish511/RPSGame_React#readme",
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "lodash": "^4.17.4",
     "react": "15.4.0",
     "react-bootstrap": "^0.30.5",
@@ -34,6 +35,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.23.0",
+    "lodash.clonedeep": "^4.5.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
     "jasmine": "^2.5.3",

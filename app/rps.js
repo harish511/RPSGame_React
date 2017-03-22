@@ -1,35 +1,32 @@
 function play(p1,p2,ui,repo) {
-    new PlayUseCase(p1, p2, ui,repo).execute()
+    new PlayUseCase(p1, p2,ui,repo).execute()
 }
 
 function Play(p1Throw, p2Throw, winner){
-    this.p1Throw=p1Throw;
-    this.p2Throw=p2Throw;
+    this.human=p1Throw;
+    this.computer=p2Throw;
     this.winner=winner;
 }
 
-function PlayUseCase(p1, p2, ui,repo) {
+function PlayUseCase(p1, p2,ui,repo) {
     this.execute = function() {
          if(tie()){
             ui.tie();
             repo.save(new Play(p1,p2,"tie"))
         }else if(p1BeatsP2()){
             ui.p1Wins()
-            repo.save(new Play(p1,p2,"p1"))
+            repo.save(new Play(p1,p2,"won"))
         }else{
             ui.p2Wins()
-            repo.save(new Play(p1,p2,"p2"))
+            repo.save(new Play(p1,p2,"lost"))
         }
     }
 
     function p1BeatsP2() {
-        return p1=='paper' && p2 ==='rock' ||
-            p1=='scissors'&& p2==='paper'||
-            p1==='rock' && p2==='scissors';
+        return p1=='Paper' && p2 ==='Rock' ||
+            p1=='Scissors'&& p2==='Paper'||
+            p1==='Rock' && p2==='Scissors';
     }
-
-    const VALID_INPUTS=['rock','paper','scissors'];
-
 
     function tie() {
         return p1==p2;

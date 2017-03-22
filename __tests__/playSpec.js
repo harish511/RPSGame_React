@@ -1,9 +1,9 @@
 const { play} = require('../app/rps')
 const {FakePlayRepo} =require('../__mocks__/FakePlayRepo')
 describe("Play", function () {
-    const ROCK = "rock";
-    const PAPER = "paper";
-    const SCISSORS='scissors';
+    const ROCK = "Rock";
+    const PAPER = "Paper";
+    const SCISSORS='Scissors';
     let ui,repo;
     beforeEach(function () {
         repo = new FakePlayRepo()
