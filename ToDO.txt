@@ -1,0 +1,3 @@
+--Pause the game
+-- move the restart to right side
+-- keep start the button on the left side

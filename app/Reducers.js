@@ -21,6 +21,14 @@ const Reducers = {
         state.history=action.value;
         return state;
     },
+    ROUNDS_CHANGE :(state, action) => {
+        state.scores.noOfRounds=action.value;
+        return state;
+    },
+
+    TIME_CHANGE :(state, action) => {
+
+    },
     RESTART_GAME: (state, action) => {
         return {
             scores:{    
@@ -29,6 +37,7 @@ const Reducers = {
                       tie:0, 
                       noOfRounds:0
                   },
+             status:"STARTED",
           history: []
         }
     }

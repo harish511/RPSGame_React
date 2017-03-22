@@ -8,17 +8,17 @@ export default class extends React.Component {
   render() {
       var stats = this.props.scores;
       var message = '';
-      var alertClass = ''; 
+      var resultClass = ''; 
       var game = this.props.result;
       if(Object.keys(game).length !== 0 && game.constructor === Object){
-        if (game.result === 1) {
+        if (game.result.tie) {
           message = 'Tie! Play Again...';
-        } else if (game.result === 2) {
-          message = 'You Won: '+ game.player + ' beat ' + game.computer + '!';
-          alertClass = 'won';
+        } else if (game.result.won) {
+          message = 'Congrats!! You have won the game against computer!';
+          resultClass = 'won';
         } else {
-          message = 'You Lost: '+ game.computer + ' beat ' + game.player + '!';
-          alertClass = 'lost'
+          message = 'Sorry Please try again! You have lost against me!';
+          resultClass = 'lost'
         }
     }
     
@@ -26,10 +26,10 @@ export default class extends React.Component {
     
     return (
       <nav className="navbar navbar-default">
-        <div className="container-fluid gameInfo">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6">
-              <h4 className={alertClass}><span><strong>{message}</strong></span></h4>
+              <h4 className={resultClass}><span><strong>{message}</strong></span></h4>
             </div>
             <div className="col-sm-2 text-right">
               <h4>Won: <span><strong>{stats.won}</strong></span></h4>

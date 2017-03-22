@@ -13,6 +13,21 @@ export default class Dispatcher {
                           value:value
                         })
                     };
+
+     this.timeChange =(value) => {
+        store.reduce({
+          actionType:"TIME_CHANGE",
+          value:value
+        })
+    };
+
+
+     this.roundsChange =(value) => {
+        store.reduce({
+          actionType:"ROUNDS_CHANGE",
+          value:value
+        })
+    };
 }
 
 }

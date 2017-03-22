@@ -8,7 +8,7 @@ const initialState = {
               tie:0, 
               noOfRounds:0
           },
-    timeLimit: 0,
+          status:"NOT-STARTED",
   history: []
 };
 
