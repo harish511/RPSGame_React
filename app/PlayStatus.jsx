@@ -11,12 +11,12 @@ export default class extends React.Component {
       var resultClass = ''; 
       var game = this.props.result;
       if(Object.keys(game).length !== 0 && game.constructor === Object){
-        if (game.result.tie) {
+        if (game.tie) {
           message = 'Tie! Play Again...';
-        } else if (game.result.won) {
+        } else if (game.won) {
           message = 'Congrats!! You have won the game against computer!';
           resultClass = 'won';
-        } else {
+        } else if (game.lost){
           message = 'Sorry Please try again! You have lost against me!';
           resultClass = 'lost'
         }

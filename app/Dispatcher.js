@@ -20,8 +20,7 @@ export default class Dispatcher {
           value:value
         })
     };
-
-
+    this.whoWon= () => { store.reduce({actionType:"WHO_WON"})}
      this.roundsChange =(value) => {
         store.reduce({
           actionType:"ROUNDS_CHANGE",

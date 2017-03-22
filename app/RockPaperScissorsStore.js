@@ -6,8 +6,9 @@ const initialState = {
               won:0,
               lost:0, 
               tie:0, 
-              noOfRounds:0
+              noOfRounds:""
           },
+          result:{},
           status:"NOT-STARTED",
   history: []
 };

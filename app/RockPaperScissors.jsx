@@ -16,17 +16,20 @@ export default class RockPaperScissors extends React.Component {
         this.state = {
           scores: store.getState().scores,
           history: store.getState().history,
-          result: {}
+          noOfRoundsRemaining: store.getState().scores.noOfRounds,
+          result: store.getState().result,
+          status: store.getState().status
         };
         store.subscribe((newState) => {
         this.setState({
             scores:  newState.scores,
            history: newState.history,
-          result: {} 
+          result: newState.result
           });
           
-       });
+       }); 
     }
+
 
     render(){
         

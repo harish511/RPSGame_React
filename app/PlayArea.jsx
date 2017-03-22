@@ -66,7 +66,7 @@ export default class extends React.Component {
   };
 
   handleRoundsChange(e){
-    dispatcher.roundsChange(event.target.value);
+    dispatcher.roundsChange(5);
   }
 
   handleTimeChange(e){
@@ -105,6 +105,7 @@ export default class extends React.Component {
       this.openModal();
       repo.clear();
       dispatcher.restartGame();
+       dispatcher.roundsChange(5); 
     }
 
     pauseGame(){
