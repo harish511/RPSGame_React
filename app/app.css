@@ -1,0 +1,9 @@
+.human,.computer{
+	    width: 50%;
+    display: inline-block;
+    height: 30%;
+    min-height: 100px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

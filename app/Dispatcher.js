@@ -6,6 +6,7 @@ export default class Dispatcher {
     this.humanWins = ()=>{store.reduce({actionType:"HUMAN_WINS"})};
     this.humanLost = ()=>{store.reduce({actionType:"HUMAN_LOST"})};
     this.tie = ()=> {store.reduce({actionType: "TIE"})};
+    this.restartGame=() =>{store.reduce({actionType:"RESTART_GAME"})};
     this.saveHistory =(value) => {
                         store.reduce({
                           actionType:"SAVE_HISTORY",

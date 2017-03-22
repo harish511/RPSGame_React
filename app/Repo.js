@@ -1,7 +1,11 @@
 function Repo() {
-    const plays=[];
+    let plays=[];
     this.empty=function(){
         return plays.length===0;
+    }
+    this.clear=function(){
+        plays=[];
+        return plays;
     }
 
     this.save=function(play){

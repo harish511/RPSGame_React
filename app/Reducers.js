@@ -20,6 +20,17 @@ const Reducers = {
     SAVE_HISTORY: (state, action) =>{
         state.history=action.value;
         return state;
+    },
+    RESTART_GAME: (state, action) => {
+        return {
+            scores:{    
+                      won:0,
+                      lost:0, 
+                      tie:0, 
+                      noOfRounds:0
+                  },
+          history: []
+        }
     }
 };
 

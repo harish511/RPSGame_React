@@ -4,6 +4,7 @@ import PlayArea from "./PlayArea.jsx"
 import History from './History.jsx';
 import PlayStatus from './PlayStatus.jsx';
 import bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import app from './app.css';
 import { store, dispatcher } from "./Redux.js";
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
