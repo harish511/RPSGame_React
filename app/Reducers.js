@@ -1,8 +1,8 @@
 
 function whoWon(state){
-  if(state.scores.win>state.scores.lost){
+  if(state.scores.won>state.scores.lost){
         state.result.won=true;
-      }else if(state.scores.win>state.scores.lost){
+      }else if(state.scores.won>state.scores.lost){
         state.result.lost=true;
       }else{
         state.result.tie=true;
